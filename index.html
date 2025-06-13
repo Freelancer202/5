@@ -54,6 +54,9 @@
       }
     }
   </style>
+  <script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAG4m9J3KkSZoqjDS2X3OOVAiZ82m84aTCP4CWxhXzf0VhVRdHEjsKslm_4fMLdUtDt9CeQUA-UG_Q2pA&components=hosted-buttons&disable-funding=venmo&currency=CAD">
+</script>
 </head>
 <body>
 
@@ -61,10 +64,12 @@
     <h1>Pay for Your Project</h1>
     <p>Use your credit or debit card below to pay securely — no PayPal account required.</p>
 
-    <!-- PayPal SDK and Button -->
-    <script 
-      src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&components=hosted-buttons&disable-funding=venmo&currency=USD">
-    </script>
+    <div id="paypal-container-TMVTRXM59H3VQ"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "TMVTRXM59H3VQ",
+  }).render("#paypal-container-TMVTRXM59H3VQ")
+</script>
 
     <div id="paypal-container-TMVTRXM59H3VQ"></div>
 
