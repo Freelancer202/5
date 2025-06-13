@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pay for Services - YourName</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0d47a1;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    #paypal-container {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Pay for Your Project</h1>
+    <p>Use your credit or debit card below to pay securely — no PayPal account required.</p>
+
+    <!-- PayPal SDK and Button -->
+    <script 
+      src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&components=hosted-buttons&disable-funding=venmo&currency=USD">
+    </script>
+
+    <div id="paypal-container-TMVTRXM59H3VQ"></div>
+
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "TMVTRXM59H3VQ" // Replace with your actual hosted button ID
+      }).render("#paypal-container-TMVTRXM59H3VQ")
+    </script>
+
+    <p style="margin-top: 30px; font-size: 14px; color: #555;">
+      Having trouble? <a href="mailto:youremail@example.com">Contact me</a>
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 YourName. Freelance Developer. Secure Payments via PayPal.
+  </footer>
+
+</body>
+</html>
